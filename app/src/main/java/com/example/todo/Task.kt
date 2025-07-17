@@ -1,11 +1,14 @@
 package com.example.todo
 
-import androidx.room.Entity
-import androidx.room.PrimaryKey
 
-@Entity(tableName = "tasks")
+import android.os.Build
+import androidx.annotation.RequiresApi
+import java.time.Instant
+import java.util.Date
+
 data class Task(
-    @PrimaryKey(autoGenerate = true) val id: Int = 0,
+    val id: Int = 0,
     val title: String,
-    val isDone: Boolean = false
+    var created:Date
 )
+
